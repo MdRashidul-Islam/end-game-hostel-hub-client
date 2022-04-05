@@ -2,6 +2,7 @@ import { Toolbar } from '@mui/material';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PrivateRoute from './utility/PrivateRoute';
+import Cart from './views/components/common/Cart';
 import Header from './views/components/common/Header';
 import Contact from './views/pages/contact/Contact';
 import Home from './views/pages/home/Home';
@@ -22,6 +23,8 @@ function App() {
                     <Route path="/login" element={<SignIn />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/cart" element={<Cart />} />
+
                     <Route path="/*" element={<PrivateRoute />}>
                         <Route path="secure" element={<Secure />} />
                     </Route>
